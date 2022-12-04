@@ -1,0 +1,63 @@
+---
+title: "What the MATH4753AminatO package does - Oyeleke Aminat"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753AminatO)
+```
+
+
+# Introduction
+
+This package is basically a summary of the functions that I considered more interesting or useful during my learning, all of them are
+taken from the laboratories we have done in the course so far.
+
+# R functions
+
+## mybin.R
+
+This function performs a binomial simulation, it has default values of iter=100, p=0.5, and n=10.It returns a barplot of relative frequencies and a table of the same
+
+
+```{r}
+mybin()
+```
+
+## myboot.R
+
+This is a function created to run the bootstrap simulation technique to estimate a confidence interval of a parameter of interest.
+
+```{r}
+s=c(3,4,5,6)
+myboot(x=s)
+```
+
+
+
+## myconfint.R
+
+
+This is a more basic function, this is an example of how R can be used as a calculator, to estimate the interval of the mean of a single sample.
+
+```{r}
+myci(c(3,4,5,6))
+```
+
+## myncurve.R
+
+This function creates a normal distribution curve using the mean and the standard deviation as varaiables, and also estimates the lower tail probability (1- alpha) of a point of interest. 
+```{r}
+myncurve(mu=10,sigma=2,p=9)
+```
